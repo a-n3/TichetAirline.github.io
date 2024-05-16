@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز التذاكر</title>
+
+    <link rel="stylesheet" href="Bootstrap/css/bootstrap.min.css">
+    <style>
+        body { padding-right: 10px; background-color: #854F6C; color: #fbe4d8;  width: 100%; table-layout: auto;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+        h1{  font-size:xx-large;
+         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+        header {  color: #fbe4d8; padding: 10px; text-align: center;}
+        form {margin-top: 30px;}
+        label{display: block;margin-top: 10px;}
+        input, select { width: 100%; padding: 10px; margin-top: 5px; }
+        button{width: 100%; padding: 10px; background:#fbe4d8  ; color: #854F6C; border: none; margin-top: 20px; }
+        .time .time-colon .time-text,
+  .time .time-colon .colon {
+    font-size: 35px;
+    font-weight: 600;}
+    .first {font: 100;}
+    </style>
+</head>
+<body>
+    <a class="btn btn-outline-light" href="./Home.html" role="button" style="border-radius: 32px;" >Home</a>
+    <form  id="bookingForm">
+
+      <label for="full-name">الاسم</label>
+      <input type="text" id="full-name" name="full-name" required><br>
+
+           <label for="passport-number">رقم جواز السفر</label>
+        <input type="text" id="passport-number" name="passport-number" required><br>
+
+        <label for="phone-number">رقم الهاتف</label>
+        <input type="tel" id="phone-number" name="phone-number" required><br>
+
+        <div>
+        <label for="destination">المتجهة إلى</label>
+        <input type="text" id="destination" name="destination" required list="datalistOptions"><br>
+        <datalist id="datalistOptions">
+          <option value="اليمن">
+          <option value="السعوديه">
+          <option value="الامارات">
+          <option value="الكويت">
+          <option value="تركيا">
+        </datalist>
+</div>
+        <div>
+         <label for="departure">تاريخ المغادرة </label>
+         <input type="date" id="departure" name="departure" required>
+        </div>
+        <div>
+           <label for="return">تاريخ العودة</label>
+           <input type="date" id="return" name="return">
+        </div>
+        <div>
+          <label for="passenger-count">عدد الركاب</label>
+          <input type="number" id="passenger-count" name="passenger-count" min="1" required>
+      </div>
+     <button  type="submit" style="border-radius: 32px;"  >بحث عن رحلات</button>
+
+    </form>
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          alert('تم الحجز');
+        });
+        setInterval(() => {
+          let data = new data (),
+          hour = data.getHours(),
+          min = data.getMinutes(),
+          sec= data.getSeconds();
+        
+        })
+        </script>
+  
+        <script src="Bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+</html>
